@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Para Fati 💖</title>
+
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            text-align:center;
+            font-family: Arial;
+            color:white;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            overflow:hidden;
+        }
+
+        h1{
+            margin-top:40px;
+            font-size:40px;
+        }
+
+        p{
+            font-size:18px;
+            margin:10px 20px;
+        }
+
+        .container{
+            position:relative;
+            z-index:2;
+        }
+
+        .heart{
+            position: absolute;
+            bottom: -50px;
+            font-size:20px;
+            animation: subir 6s linear infinite;
+            opacity:0.7;
+        }
+
+        @keyframes subir{
+            0%{
+                transform: translateY(0) scale(1);
+                opacity:0.7;
+            }
+            100%{
+                transform: translateY(-800px) scale(1.5);
+                opacity:0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Para ti, Mi amoll 💖</h1>
+
+    <p>
+        Te amooooo ✨
+    </p>
+
+    <p>
+        Esta canción es un pedacito de lo que siento por ti 💞
+    </p>
+
+    <iframe style="border-radius:12px; margin-top:20px;"
+        src="https://open.spotify.com/embed/track/4xkOaSrkexMciUUogZKVTS"
+        width="300"
+        height="380"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+
+    <p style="margin-top:20px;">
+        Ayloviuuuuuu 💖
+    </p>
+</div>
+
+<script>
+    function crearCorazon(){
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "💖";
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
+    }
+
+    setInterval(crearCorazon, 300);
+</script>
+
+</body>
+</html>
